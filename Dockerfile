@@ -1,4 +1,5 @@
-FROM rocker/binder:3.5.2 # can't find index.ipynb
+FROM rocker/binder:3.5.2
+
 #FROM rocker/r-ver:3.5.1
 
 #FROM andrewosh/binder-base
