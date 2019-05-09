@@ -3,11 +3,8 @@ MAGstats
 [![Binder](http://mybinder.org/badge_logo.svg)](https://beta.mybinder.org/v2/gh/housw/MAGstats-binder/master?filepath=index.ipynb)
 
 
-## Table of Contents
-
-[TOC]
-
-## Beginners Guide
+Beginners Guide
+---
 
 To visualize the completeness and reduduancy of your MAG, you need to get two files ready (`example_data`):
 
