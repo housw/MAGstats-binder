@@ -1,6 +1,6 @@
 FROM rocker/binder:3.5.2
 
-# https://hub.docker.com/r/rocker/binder 
+# Credit: https://hub.docker.com/r/rocker/binder 
 
 ## Copies your repo files into the Docker Container
 USER root
