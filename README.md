@@ -1,8 +1,8 @@
 MAGstats
 ===
-
-A Jupyter notebook with a workflow to visualize the completeness and redundancy of your MAGs.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2780512.svg)](https://doi.org/10.5281/zenodo.2780512)
+
+MAGstats: A Jupyter notebook to visualize the completeness and redundancy of MAGs and draft genomes
 
 Run it in Binder:
 [![Binder](http://mybinder.org/badge_logo.svg)](https://beta.mybinder.org/v2/gh/housw/MAGstats-binder/master?filepath=index.ipynb)
