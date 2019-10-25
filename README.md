@@ -1,36 +1,42 @@
-MAGstats
+MAGstats - Visualizing the completeness and redundancy of MAGs and draft genomes
 ===
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2780512.svg)](https://doi.org/10.5281/zenodo.2780512)
+filename: README.md
 
-MAGstats: A Jupyter notebook to visualize the completeness and redundancy of MAGs and draft genomes
+## Quick Start
 
-Run it in Binder:
-[![Binder](http://mybinder.org/badge_logo.svg)](https://beta.mybinder.org/v2/gh/housw/MAGstats-binder/master?filepath=index.ipynb)
+ - Launch the binder with the button above. This will take a few minutes to load.
+ - Upload your newick tree and metadata file to the `example_data` folder via the `upload` button.
+ - Launch the R Jupyter notebook by clicking `index.ipynb`
+ - Change the necessary file names
+ 	```r
+	nwk_file <- "GToTree_output.newick"
+	bin_metadata_file <- "MED_metadata.tsv"
+	```
+ - Execute the code blocks to generate the final figure
 
+## Example Output
 
+ - ![Example Output](MAGstats.png)
 
-Beginners Guide
----
+## Summary
 
-To visualize the completeness and reduduancy of your MAG, you need to get two files ready (`example_data`):
+ - Designed to visualize various quality metrics for MAGs and draft genomes
+ - The immediate input for MAGstats are a newick tree file and a metadatafile
+ 	- A newick tree file can be generated using [GToTree](https://github.com/AstrobioMike/GToTree)
+ 	- A metadata file can be generated using the `qa` option in [CheckM](https://github.com/Ecogenomics/CheckM)
+ 		- MAGstats only requires five columns from the CheckM output with the names `MAG_ID	Length	Completion	Redundancy	GC_Content`
+ 		- Column names must exactly match these five in a tab-delimited format
+ 		- Necessary columns can be selected in Excel and exported as a TSV
+ - The output displays the phylogenetic tree of MAGs and genomes with corresponding quality information. MAGstats can be used to explore the quality of a set of MAGs and/or genomes for downstream analysis 
 
-1. A newick tree file (`MAG_tree.nwk`)
-2. A metadata file (`MAG_metadata.tsv`)
-The metadata file must contain these columns in order:
-`MAG_ID	Length	Completion	Redundancy	GC_Content`, and is tab-delimited.
+## Authors
 
-You can launch this jupyter notebook using binder by clicking [![Binder](http://mybinder.org/badge_logo.svg)](https://beta.mybinder.org/v2/gh/housw/MAGstats-binder/master?filepath=index.ipynb), and upload your files to the `example_data` folder via the `upload` button in your project directory (where the`index.ipynb` locates). You probably need to modify these two lines to adapt to your file names in the first code block before running through all the codes: 
-```r
-nwk_file <- "MAG_tree.nwk"
-bin_metadata_file <- "MAG_metadata.tsv"
-```
+ - Shengwei Hou, housw, 0000-0002-4474-7443
 
-How to generate input files 
----
+## Links
 
-1. For the tree file, you can use [GToTree](https://github.com/AstrobioMike/GToTree) to extract single-copy marker genes and to get the concatenated multiple sequence alignements. Then use [RAxML-NG](https://github.com/amkozlov/raxml-ng) to build the maximum-likelihood phylogenomic tree. [GToTree](https://github.com/AstrobioMike/GToTree) also generate a tree file by running `fasttree`.
+Zenodo Binder, doi: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2780512.svg)](https://doi.org/10.5281/zenodo.2780512)
 
-2. For the metadata file, you can get it via [checkM](https://github.com/Ecogenomics/CheckM) or [anvio](https://github.com/merenlab/anvio), and format it using Excel and export it as tsv.
+Github Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/speeding-up-science-workshops/MAGstats-binder/master)
 
-If everything works well, you will get something like this: 
-![MAGstats](https://github.com/housw/MAGstats-binder/blob/master/MAGstats.png)
+Github Repository: https://github.com/speeding-up-science-workshops/MAGstats-binder/
